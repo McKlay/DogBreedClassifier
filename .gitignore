@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pkl
+*.pt
+*.pth
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# Models and Checkpoints
+models/*.pth
+
+# Large image dataset
+data/train/*/*
+data/val/*/*
+
+# Gradio cache
+gradio_cached_examples/
