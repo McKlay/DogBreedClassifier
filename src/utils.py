@@ -75,8 +75,8 @@ def plot_training_curves(train_losses, val_losses, train_accs, val_accs):
     plt.tight_layout()
     plt.show()
 
-def load_image(image_path, image_size=224):
-    """Load and preprocess image for prediction"""
+def load_image(image, image_size=224):
+    """Handle both PIL Image and file path input for Hugging Face or CLI"""
     transform = transforms.Compose([
         transforms.Resize((image_size, image_size)),
         transforms.ToTensor(),
@@ -84,7 +84,11 @@ def load_image(image_path, image_size=224):
                              [0.229, 0.224, 0.225])
     ])
 
-    image = Image.open(image_path).convert("RGB")
+    if isinstance(image, str):  # If file path
+        image = Image.open(image).convert("RGB")
+    elif isinstance(image, Image.Image):  # Already PIL (from Gradio)
+        image = image.convert("RGB")
+
     return transform(image).unsqueeze(0)  # Add batch dimension
 
 def predict_image(model, image_tensor, class_names, device=None):
