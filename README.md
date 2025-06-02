@@ -1,24 +1,24 @@
 ---
-title: Dog Breed Classifier V2
+title: DogBreedClassfier-mobilenetV2
 emoji: 🐶
-colorFrom: indigo
-colorTo: blue
+colorFrom: purple
+colorTo: pink
 sdk: gradio
-app_file: app/app.py
-pinned: false
+app_file: app.py
+pinned: true
 ---
-[![HF Spaces](https://img.shields.io/badge/🤗%20HuggingFace-Space-blue?logo=huggingface&style=flat-square)](https://huggingface.co/spaces/McKlay/SentimentAnalysisV2-HF)
+[![HF Spaces](https://img.shields.io/badge/🤗%20HuggingFace-Space-blue?logo=huggingface&style=flat-square)](https://huggingface.co/spaces/McKlay/DogBreedClassfier-mobilenetV2)
 [![Gradio](https://img.shields.io/badge/Built%20with-Gradio-orange?logo=gradio&style=flat-square)](https://www.gradio.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/McKlay/TensorFlow-Companion-Book)
-![GitHub Repo stars](https://img.shields.io/github/stars/McKlay/TensorFlow-Companion-Book?style=social)
-![GitHub forks](https://img.shields.io/github/forks/McKlay/TensorFlow-Companion-Book?style=social)
-![MIT License](https://img.shields.io/github/license/McKlay/TensorFlow-Companion-Book)
+![GitHub last commit](https://img.shields.io/github/last-commit/McKlay/DogBreedClassifier)
+![GitHub Repo stars](https://img.shields.io/github/stars/McKlay/DogBreedClassifier?style=social)
+![GitHub forks](https://img.shields.io/github/forks/McKlay/DogBreedClassifier?style=social)
+![MIT License](https://img.shields.io/github/license/McKlay/DogBreedClassifier)
 
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=McKlay.TensorFlow-Companion-Book)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=McKlay.DogBreedClassifier)
 
-# 🐶 Dog Breed Classifier V2
+# 🐶 DogBreedClassfier-mobilenetV2
 
 A lightweight image classifier built using **MobileNetV2** and transfer learning in PyTorch.
 
@@ -86,7 +86,7 @@ Stanford Dogs Dataset Link:
 
 ## 💻 Deployment
 
-This app is deployed on [Hugging Face Spaces](https://huggingface.co/spaces/McKlay/DogBreedClassfier-mobilenetV2) using Gradio.  
+This app is deployed on [Hugging Face Spaces](https://huggingface.co/spaces/McKlay/DogBreedClassifier) using Gradio.  
 It loads class names dynamically from `data/train/`, so folders must be present (can be empty).
 
 ---
@@ -103,3 +103,9 @@ It loads class names dynamically from `data/train/`, so folders must be present 
 Built by [Clay Mark Sarte](https://www.linkedin.com/in/clay-mark-sarte-283855147/) for deployment on Hugging Face.
 
 Feel free to fork and modify this space!
+
+---
+
+Notes:
+
+⚠️ This app uses NumPy 1.24.x to maintain compatibility with PyTorch and TorchVision C extensions. NumPy 2.x is not yet fully supported by these libraries.
