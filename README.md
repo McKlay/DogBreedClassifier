@@ -86,7 +86,7 @@ Stanford Dogs Dataset Link:
 
 ## 💻 Deployment
 
-This app is deployed on [Hugging Face Spaces](https://huggingface.co/spaces/McKlay/DogBreedClassifier) using Gradio.  
+This app is deployed on [Hugging Face Spaces](https://huggingface.co/spaces/McKlay/DogBreedClassfier-mobilenetV2) using Gradio.  
 It loads class names dynamically from `data/train/`, so folders must be present (can be empty).
 
 ---
